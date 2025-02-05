@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navLinkClass = ({ isActive }) =>
+    isActive
+      ? "block py-2 px-3 text-blue  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+      : "text-green";
+  const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
   return (
     <>
       <nav className="bg-white border-gray-200 ">
@@ -22,6 +27,7 @@ const Navbar = () => {
               aria-expanded="false"
               data-dropdown-toggle="user-dropdown"
               data-dropdown-placement="bottom"
+              onClick={()=>setIsMobileMenuHidden(!isMobileMenuHidden)}
             >
               <span className="sr-only">Open user menu</span>
               <img
@@ -31,15 +37,15 @@ const Navbar = () => {
               />
             </button>
             <div
-              className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+              className={`z-2  my-5 mt-15  text-base list-none absolute top-7 right-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm ${isMobileMenuHidden?"hidden":""}`}
               id="user-dropdown"
             >
               <div className="px-4 py-3">
                 <span className="block text-sm text-gray-900 dark:text-white">
-                  Bonnie Green
+                  USER NAME
                 </span>
                 <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                  name@flowbite.com
+                  username@email.com
                 </span>
               </div>
               <ul className="py-2" aria-labelledby="user-menu-button">
@@ -59,14 +65,7 @@ const Navbar = () => {
                     Settings
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                  >
-                    Earnings
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="#"
@@ -106,36 +105,24 @@ const Navbar = () => {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-user"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700 active">
               <li>
-                <NavLink
-                  to="/"
-                  className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                >
+                <NavLink to="/" className={navLinkClass}>
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/about"
-                  className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                >
+                <NavLink to="/about" className={navLinkClass}>
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/contact"
-                  className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                >
+                <NavLink to="/contact" className={navLinkClass}>
                   Contact
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/product"
-                  className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                >
+                <NavLink to="/product" className={navLinkClass}>
                   Product
                 </NavLink>
               </li>
