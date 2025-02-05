@@ -7,8 +7,8 @@ import {
 } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/contact";
-import Product from "./pages/product";
+import Contact from "./pages/Contact";
+import Product from "./pages/Products";
 
 const Routes = () => {
   const router = createBrowserRouter(
@@ -25,3 +25,6 @@ const Routes = () => {
 };
 
 export default Routes;
+
+// or create a js file with route.js and write const HOME_ROUTE= "/" and const ABOUT_ROUTE="/about" then export multiple with export{HOME_ROUTE,ABOUT_ROUTE}
+// then  to use js variable use {}            <Route path={ABOUT_ROUTE} element={<About />} />
