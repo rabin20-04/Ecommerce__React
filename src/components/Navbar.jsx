@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -107,41 +108,38 @@ const Navbar = () => {
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
               <li>
-                <a
-                  href="/"
+                <NavLink
+                  to="/"
                   className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
                 >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="/about"
+                <NavLink
+                  to="/about"
                   className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 >
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <NavLink
+                  to="/contact"
                   className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 >
                   Contact
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="/product"
+                <NavLink
+                  to="/product"
                   className="block py-2 px-3 text-white  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 >
                   Product
-                </a>
+                </NavLink>
               </li>
-              <li>
-               
-              </li>
+              <li></li>
             </ul>
           </div>
         </div>

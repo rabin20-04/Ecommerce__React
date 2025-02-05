@@ -5,7 +5,7 @@ const Products = () => {
   return (
     <>
       <Navbar />
-      <div>Products</div>
+      <div>This is from Products</div>
     </>
   );
 };
