@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
   return (
     <>
-      <nav className="bg-amber-50 border-gray-200 ">
+      <nav className="bg-amber-50 border-gray-200 border ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
