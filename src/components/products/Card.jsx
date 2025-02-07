@@ -2,6 +2,8 @@ import white1 from "../../assets/img/white1.png";
 import React from "react";
 
 const ProductsCard = (props) => {
+
+  // here data comes in props we can further destructure for better reading by const ProductsCard = ({name,rand,category,etc}) => { then return etc
   return (
     <>
       <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white">
@@ -12,9 +14,12 @@ const ProductsCard = (props) => {
         <img src={white1} alt="" className="h-80 mx-auto w-auto" />
         <h2 className="mt-3 pb-2 text-xl font-semibold">{props.name}</h2>
         <p>
-          <span className="font-bold text-xl pe-1">${props.actual_price}</span>
+          <span className="font-bold text-xl pe-1">
+            ${Math.floor(props.price) * 0.8}
+          </span>
+          {/* just pay 80% , 20% discount  */}
           <span className=" line-through text-slate-500 text-sm ">
-            ${props.cut_price}
+            ${props.price}
           </span>
         </p>
         <button className=" bg-red-700 px-2 py-1 text-white rounded hover:bg-red-800 mt-3">
@@ -26,6 +31,16 @@ const ProductsCard = (props) => {
 };
 
 export default ProductsCard;
+
+
+
+
+
+
+
+
+
+
 
 // ---
 
@@ -56,3 +71,4 @@ export default ProductsCard;
 // };
 
 // export default ProductsCard;
+// props.name is sent from the other fn which is calling this productcard function  here it is coming from list
