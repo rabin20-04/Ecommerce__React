@@ -6,7 +6,7 @@ import React from "react";
 const ProductsCard = () => {
   return (
     <>
-      <div className="border shadow my-4 py-6 px-6  rounded-xl  relative">
+      <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white">
         {/* ProductsCard */}
         <span  className="text-xs text-white bg-red-600 rounded-xl my-2 px-1 py-1 absolute top-0 right-4">Clothing</span>
         <img src={white1} alt="" className="h-80 mx-auto w-auto" />
