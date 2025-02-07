@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 const About = () => {
   return (
     <>
-      <Navbar />
-      <div>This is from About page</div>
+      {/* <Navbar/> added to main layout .jsx */}
+      <div>ABOUT page </div>
     </>
   );
 };

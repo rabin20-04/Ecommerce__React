@@ -1,11 +1,13 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-    <><Navbar/>
+    <>
+      {/* <Navbar /> added to main layout */}
+      <div>home</div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

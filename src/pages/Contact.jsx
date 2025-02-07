@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const Contact = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> added to main layout  */}
       <div>This is from Contacts</div>
     </>
   );
