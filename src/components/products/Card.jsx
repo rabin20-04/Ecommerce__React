@@ -4,6 +4,8 @@ import React from "react";
 const ProductsCard = (props) => {
 
   // here data comes in props we can further destructure for better reading by const ProductsCard = ({name,rand,category,etc}) => { then return etc
+
+  
   return (
     <>
       <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white">
