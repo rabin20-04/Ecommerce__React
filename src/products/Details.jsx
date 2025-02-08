@@ -27,6 +27,8 @@ const ProductDetails = () => {
     <>
       <section className="py-2 bg-gray-100">
         <div className="container mx-auto px-4 ">
+        
+
           <div className="flex  gap-4 flex-col lg:flex-row   justify-around items-center ">
             <img src={white1} className="" alt="" />
             <div className="w-1/2">
@@ -69,6 +71,7 @@ const ProductDetails = () => {
               </button>
             </div>
           </div>
+          
         </div>
       </section>{" "}
       <ToastContainer
