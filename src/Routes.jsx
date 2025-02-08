@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Products";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
-import ProductDetails from "./products/details";
+import ProductDetails from "./products/Details";
 import MainLayout from "./layouts/MainLayout";
 
 const Routes = () => {
@@ -27,7 +27,7 @@ const Routes = () => {
         <Route path="/products">
           <Route index element={<Product />} />
           {/*just visit product page */}
-          <Route path={":id"} element={<ProductDetails />} />
+          <Route path=":id" element={<ProductDetails />} />
           {/*for any product id from product page so under another main rout */}
           {/* <Route path="/products/:id" element={<ProductDetails />} />{" "} */}
           {/* will use id to return and get in backend -- more in details.jsx */}

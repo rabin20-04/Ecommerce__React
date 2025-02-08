@@ -7,10 +7,15 @@ import { useParams } from "react-router-dom";
 import Title from "../components/Title";
 
 const ProductDetails = () => {
-  const params = useParams();
+  const { id } = useParams(); // Get product ID from URL
+  const product = ProductData.find((item) => item.id === parseInt(id)); // Find product by ID
+if (!product) {
+    return <div>Product not found</div>; // Handle case where product is not found
+  }
+
   return (
     <>
-      <section className="py-12 bg-gray-100">
+      <section className="py-2 bg-gray-100">
         <div className="container mx-auto px-4 ">
           <div className="flex  gap-4 flex-col lg:flex-row   justify-around items-center ">
             <img src={white1} className="" alt="" />
@@ -23,7 +28,7 @@ const ProductDetails = () => {
                 <FaStarHalf />
               </div>
               <p className="pt-2">
-                <Title label="Jeans Jacket" />
+                <Title label={product.name}/>
               </p>
               <p className="text-justify py-2">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure,
@@ -34,14 +39,14 @@ const ProductDetails = () => {
                 beatae incidunt explicabo! Quasi, earum. Ipsum, amet eveniet!
                 Molestiae?
               </p>
-              <p>
+             
                 <h1 className="font-bold text-xl mb-2">LEVIS</h1>
-                <span className=" text-2xl mt-2 pe-1">$100</span>
+                <span className=" text-2xl mt-2 pe-1">{Math.floor(product.price*0.8)}</span>
                 {/* just pay 80% , 20% discount  */}
                 <span className=" line-through text-slate-500 text-sm ">
-                  $200
+                  {product.price}
                 </span>
-              </p>
+             
             
               <button />
               <button className=" bg-teal-700 px-2 py-1 gap-2 text-white rounded hover:bg-green-900  flex items-center ">
@@ -57,3 +62,26 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
+
+
+
+
+
+// -------------------------
+// from api 
+// useEffect(() => {
+//   getProducts()
+//     .then((response) => {
+//       setProductList(response.data);
+//       setLoading(false);
+//     })
+//     .catch(console.log("sucessful error"));
+// }, []);
+// if (loading)
+//   return (
+//     <div className="flex font-bold justify-center items-center h-screen w-screen">
+//     <i className="fa-solid fa-spinner fa-spin-pulse text-blue-500 text-6xl"></i>
+//   </div>
+  
+//   );
