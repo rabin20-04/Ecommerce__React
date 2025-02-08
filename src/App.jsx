@@ -4,8 +4,13 @@ import viteLogo from "/vite.svg";
 import "./index.css";
 import Button from "./components/buttons";
 import Routes from "./Routes";
+import { Router } from "react-router-dom";
 
 function App() {
-  return <Routes/> ;
+  return (
+    <>
+      <Routes />
+    </>
+  );
 }
 export default App;
