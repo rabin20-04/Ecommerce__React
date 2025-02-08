@@ -16,6 +16,7 @@ const List = () => {
                 // same as mapping indiuidually 
                 // <ProductsCard key={ProductData.id} name={ProductData.name} price={ProductData.price}/>
               ))}
+          
 
               {/* <ProductsCard />
               <ProductsCard />
