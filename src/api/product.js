@@ -1,9 +1,10 @@
 import axios from "axios";
+import Config from "../config/config";
 
-const baseApiUrl = "https://node-20240823.vercel.app";
+
 
 const getProducts = async () => {
-  const response = await axios.get(`${baseApiUrl}/api/products`);
+  const response = await axios.get(`${Config.baseApiUrl}/api/products`);
 
   // baseurl means the url of main website then add the response getting place like /api/products
 

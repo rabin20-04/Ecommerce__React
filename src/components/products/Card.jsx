@@ -7,6 +7,7 @@ const ProductsCard = (props) => {
   // here data comes in props we can further destructure for better reading by const ProductsCard = ({name,rand,category,etc}) => { then return etc
 
 
+  console.log(props.url)
   return (
     <>
       <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white pointer ">
@@ -16,6 +17,7 @@ const ProductsCard = (props) => {
         </span>
         <img src={props.url?? white1} alt="" className="h-80 mx-auto w-auto" />
         <h2 className="mt-3 pb-2 text-xl font-semibold">{props.name}</h2>
+        
         <p>
           <span className="font-bold text-xl pe-1">
             ${Math.floor(props.price) * 0.8}

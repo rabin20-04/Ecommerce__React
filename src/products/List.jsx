@@ -48,8 +48,12 @@ export default List;
 
 //1
 // 2  using local files data
+// ---------------------------------    3 use-effect takes one function and an terminating point like
+
+
 
 // 1 ---------------------------------    after creation of a rough ui
+
 // can just be replace with variables
 // op feature of react
 // const List = () => {
@@ -74,7 +78,7 @@ export default List;
 //   );
 // };
 
-///// 2 ---------------------------------     using data from the locally created js file
+///// 2 --------------------------------- 2    using data from the locally created js file
 // import React from "react";
 // import Title from "../components/Title";
 // import ProductsCard from "../components/products/card";
