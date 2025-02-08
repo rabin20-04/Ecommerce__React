@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import white1 from "../../assets/img/white1.png";
 import React from "react";
 
@@ -5,7 +6,7 @@ const ProductsCard = (props) => {
 
   // here data comes in props we can further destructure for better reading by const ProductsCard = ({name,rand,category,etc}) => { then return etc
 
-  
+
   return (
     <>
       <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white">
@@ -24,9 +25,10 @@ const ProductsCard = (props) => {
             ${props.price}
           </span>
         </p>
-        <button className=" bg-red-700 px-2 py-1 text-white rounded hover:bg-red-800 mt-3">
+        <Link to={props.id} className=" bg-red-700 px-2 py-1 text-white rounded hover:bg-red-800 mt-3">  
+        {/* product lai click garda aaafno id ma send garne */}
           Buy Now
-        </button>
+        </Link>
       </div>
     </>
   );
@@ -63,9 +65,9 @@ export default ProductsCard;
 //           <span className="font-bold text-xl pe-1">$400</span>
 //           <span className=" line-through text-slate-500 text-sm ">$700</span>
 //         </p>
-//         <button className=" bg-red-700 px-2 py-1 text-white rounded hover:bg-red-800 mt-3">
+//         <Link className=" bg-red-700 px-2 py-1 text-white rounded hover:bg-red-800 mt-3">
 //           Buy Now
-//         </button>
+//         </Link>
 //       </div>
 
 //     </>

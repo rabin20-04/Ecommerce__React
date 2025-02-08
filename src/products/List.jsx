@@ -32,7 +32,7 @@ const List = () => {
           <div className=" py-4">
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {productList.map((product) => (
-                <ProductsCard key={product.id} {...product} />
+                <ProductsCard key={product._id} id={product._id} {...product} />
                 // same as mapping indiuidually
                 // <ProductsCard key={ProductData.id} name={ProductData.name} price={ProductData.price}/>
               ))}
