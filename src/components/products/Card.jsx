@@ -9,12 +9,12 @@ const ProductsCard = (props) => {
 
   return (
     <>
-      <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white">
+      <div className="border shadow my-4 py-6 px-6  rounded-xl  relative bg-white pointer ">
         {/* ProductsCard */}
         <span className="text-xs text-white bg-red-600 rounded-xl my-2 px-1 py-1 absolute top-0 right-4">
-          Clothing
+          {props.category??"Clothing"}
         </span>
-        <img src={white1} alt="" className="h-80 mx-auto w-auto" />
+        <img src={props.url?? white1} alt="" className="h-80 mx-auto w-auto" />
         <h2 className="mt-3 pb-2 text-xl font-semibold">{props.name}</h2>
         <p>
           <span className="font-bold text-xl pe-1">
