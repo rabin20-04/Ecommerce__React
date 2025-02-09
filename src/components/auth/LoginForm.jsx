@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Email_Regex } from "../constants/Regex";
 import { login } from "../../api/auth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 const LoginForm = () => {
+  const [hidePassword, setHidePassword] = useState(true);
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
   const navigate = useNavigate();
@@ -15,13 +17,10 @@ const LoginForm = () => {
   // this submitform is use to post the data from here to backend
   function submitForm(data) {
     console.log(data);
-    navigate("/")
+    navigate("/");
   }
 
-
   // we sent the user to home after correct email and password putting by naviagte from useNavigate of react-router-dom
-
-
 
   // } try catch is like .then .catch
   // .then ma arrow fn parameter response fn ma something then after this .catch arro fn parameter error and fn inside it
@@ -39,13 +38,14 @@ const LoginForm = () => {
   return (
     <form
       action=""
-      className="w-full md:w-1/2 bg-slate-100 rounded  py-8 px-12 "
+      className="w-full  md:w-1/2 bg-slate-100 rounded  py-8 px-12 "
       onSubmit={handleSubmit(submitForm)}
     >
       <div className="p-1 ">
         <label htmlFor="Email">Email:</label>
         <input
           id="email"
+          type="email"
           placeholder="abc@yahoo.com"
           className="px-2 py-1 mt-1 w-full rounded "
           {...register("email", {
@@ -61,10 +61,10 @@ const LoginForm = () => {
           {errors.email?.message}
         </p>
       </div>
-      <div className="p-1">
+      <div className="p-1 relative ">
         <label htmlFor="Password">Password:</label>
         <input
-          type="Password"
+          type={hidePassword ? "password" : "text"} // if hidepass type = password  if eye is clicked set hidepass of usestate to false then make type =text if hidepassord is false
           placeholder="Enter Password"
           id="Password"
           className="px-3 py-1 mt-1 w-full rounded "
@@ -80,10 +80,18 @@ const LoginForm = () => {
           // {...register("password", { required: "Password is required" })}
           // {..register("password"),{other}}
         />
+        <button
+          type="button"
+          onClick={() => setHidePassword(!hidePassword)}
+          className="absolute right-4  top-10"
+        >
+          {hidePassword ? <FaEyeSlash /> : <FaEye />}
+        </button>
       </div>
       <p className="text-red-500 text-xs mt-1 px-2">
         {errors.password?.message}
       </p>
+
       <div className=" mt-6 text-center">
         <input
           type="submit"
