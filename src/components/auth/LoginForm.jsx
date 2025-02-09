@@ -1,12 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Email_Regex } from "../constants/Regex";
 import { login } from "../../api/auth";
 const LoginForm = () => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
-
+  const navigate = useNavigate();
   //  error bhitra email xa email bhitra message
   // const { name, ref, onChange, onBlur } = register("email"); if used name={name} type is single destruct then no need ie{...register("email")}
   // register to take form user handle to send to backend and formstate to send like required message
@@ -14,8 +15,14 @@ const LoginForm = () => {
   // this submitform is use to post the data from here to backend
   function submitForm(data) {
     console.log(data);
-    
+    navigate("/")
   }
+
+
+  // we sent the user to home after correct email and password putting by naviagte from useNavigate of react-router-dom
+
+
+
   // } try catch is like .then .catch
   // .then ma arrow fn parameter response fn ma something then after this .catch arro fn parameter error and fn inside it
 
