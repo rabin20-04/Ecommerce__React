@@ -11,7 +11,7 @@ const LoginForm = () => {
   // const { name, ref, onChange, onBlur } = register("email"); if used name={name} type is single destruct then no need ie{...register("email")}
   // register to take form user handle to send to backend and formstate to send like required message
   function submitForm(data) {
-    // console.log(data);
+    console.log(data);
   }
   return (
     <form
