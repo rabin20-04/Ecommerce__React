@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Email_Regex } from "../constants/Regex";
-
+import { login } from "../../api/auth";
 const LoginForm = () => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
@@ -10,9 +10,25 @@ const LoginForm = () => {
   //  error bhitra email xa email bhitra message
   // const { name, ref, onChange, onBlur } = register("email"); if used name={name} type is single destruct then no need ie{...register("email")}
   // register to take form user handle to send to backend and formstate to send like required message
+
+  // this submitform is use to post the data from here to backend
   function submitForm(data) {
     console.log(data);
+    
   }
+  // } try catch is like .then .catch
+  // .then ma arrow fn parameter response fn ma something then after this .catch arro fn parameter error and fn inside it
+
+  // here we sent data to the function named login which is in api/auth folder
+  // function submitForm(data) {
+  //   login(data)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.response.data);
+  //     });
+
   return (
     <form
       action=""
