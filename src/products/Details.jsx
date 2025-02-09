@@ -52,7 +52,7 @@ const ProductDetails = () => {
                 Molestiae?
               </p>
 
-              <h1 className="font-bold text-xl mb-2">LEVIS</h1>
+              <h1 className="font-bold text-xl mb-2">{product.name.split(' ')[0]} Jacket</h1>
               <span className=" text-2xl mt-2 pe-1">
                 {Math.floor(product.price * 0.8)}
               </span>
@@ -69,6 +69,7 @@ const ProductDetails = () => {
                 Add to cart
                 <FaCartPlus />
               </button>
+              <p className="text-xs p-2 text-gray-500">Enjoy 20% discount on new arrivals</p>
             </div>
           </div>
           

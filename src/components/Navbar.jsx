@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { SiKasasmart } from "react-icons/si";
-import { GiSpikedDragonHead } from "react-icons/gi";const Navbar = () => {
+import { GiSpikedDragonHead } from "react-icons/gi";
+const Navbar = () => {
   const navLinkClass = ({ isActive }) =>
     isActive
       ? "block py-2 px-3 text-blue  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
@@ -12,17 +13,21 @@ import { GiSpikedDragonHead } from "react-icons/gi";const Navbar = () => {
       <nav className="bg-amber-50 border-gray-200 border z-50 relative sticky top-0 z-50">
         <div className=" text-violet-800 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
           <div className="flex items-center gap-3 ">
-          <Link to={"/"}> <span className="text-3xl ">
-          <GiSpikedDragonHead /></span>
-          </Link>{" "}
-          <a
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <span className="self-center text-violet-800 text-2xl font-semibold whitespace-nowrap ">
-              KoolMart
-            </span>
-          </a></div>
+            <Link to={"/"}>
+              {" "}
+              <span className="text-3xl ">
+                <GiSpikedDragonHead />
+              </span>
+            </Link>{" "}
+            <a
+              href="/"
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <span className="self-center text-violet-800 text-2xl font-semibold whitespace-nowrap ">
+                KoolMart
+              </span>
+            </a>
+          </div>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
@@ -130,6 +135,16 @@ import { GiSpikedDragonHead } from "react-icons/gi";const Navbar = () => {
               <li>
                 <NavLink to="/products" className={navLinkClass}>
                   Product
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/auth/login" className={navLinkClass}>
+                  Login
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/auth/register" className={navLinkClass}>
+                  Register
                 </NavLink>
               </li>
               <li></li>
