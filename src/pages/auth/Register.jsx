@@ -10,7 +10,7 @@ const Register = () => {
     <>
       <section className="py-12 ">
         <div className="max-w-screen-xl mx-auto px-12 h-[70vh]">
-          <div className="  flex flex-col lg:flex-row  items-center justify-around  px-16 h-full ">
+          <div className="  flex flex-col gap-y-4 lg:flex-row  items-center justify-around  px-16 h-full ">
             <div className="w-1/2">
               <div className="text-4xl text-[#5c6bf7]">
                 Welcome to

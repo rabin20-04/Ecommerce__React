@@ -38,10 +38,10 @@ const LoginForm = () => {
   return (
     <form
       action=""
-      className="w-full  md:w-1/2 bg-slate-100 rounded  py-8 px-12 "
+      className="w-full   md:w-1/2 bg-slate-100 rounded  py-8 px-12 "
       onSubmit={handleSubmit(submitForm)}
     >
-      <div className="p-1 ">
+      <div className="p-1  ">
         <label htmlFor="Email">Email:</label>
         <input
           id="email"
