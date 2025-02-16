@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -9,9 +9,8 @@ const About = () => {
         <p className="text-3xl text-center text-black mb-4">
           Thank you for visiting the store!
         </p>
-        
+
         <div className="flex space-x-8">
-          {/* GitHub Icon */}
           <a
             href="https://github.com/rabin20-04/React-Ecommerce.git"
             target="_blank"
@@ -21,7 +20,6 @@ const About = () => {
             <FaGithub />
           </a>
 
-          {/* LinkedIn Icon */}
           <a
             href="https://www.linkedin.com/in/rabin-poudel-770842277"
             target="_blank"

@@ -6,9 +6,6 @@ const Products = () => {
   return (
     <>
       <List />
-      
-      {/* <Navbar /> because added to main layout  */}
-      {/* <div>This is from Products</div> */}
     </>
   );
 };

@@ -2,17 +2,17 @@ import React from "react";
 import white1 from "../../src/assets/img/white1.png";
 import ProductData from "../data";
 import { FaCartPlus, FaStar, FaStarHalf } from "react-icons/fa";
-import { toast, ToastContainer } from "react-toastify"; // Import both toast and ToastContainer
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useParams } from "react-router-dom";
 import Title from "../components/Title";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Get product ID from URL
-  const product = ProductData.find((item) => item.id === parseInt(id)); // Find product by ID
+  const { id } = useParams();
+  const product = ProductData.find((item) => item.id === parseInt(id));
   if (!product) {
-    return <div>Product not found</div>; // Handle case where product is not found
+    return <div>Product not found</div>;
   }
 
   const handleAddToCart = () => {
@@ -27,8 +27,6 @@ const ProductDetails = () => {
     <>
       <section className="py-2 bg-gray-100">
         <div className="container mx-auto px-4 ">
-        
-
           <div className="flex  gap-4 flex-col lg:flex-row   justify-around items-center ">
             <img src={white1} className="" alt="" />
             <div className="w-1/2">
@@ -52,7 +50,9 @@ const ProductDetails = () => {
                 Molestiae?
               </p>
 
-              <h1 className="font-bold text-xl mb-2">{product.name.split(' ')[0]} Jacket</h1>
+              <h1 className="font-bold text-xl mb-2">
+                {product.name.split(" ")[0]} Jacket
+              </h1>
               <span className=" text-2xl mt-2 pe-1">
                 {Math.floor(product.price * 0.8)}
               </span>
@@ -69,10 +69,11 @@ const ProductDetails = () => {
                 Add to cart
                 <FaCartPlus />
               </button>
-              <p className="text-xs p-2 text-gray-500">Enjoy 20% discount on new arrivals</p>
+              <p className="text-xs p-2 text-gray-500">
+                Enjoy 20% discount on new arrivals
+              </p>
             </div>
           </div>
-          
         </div>
       </section>{" "}
       <ToastContainer
@@ -89,21 +90,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-
-// -------------------------
-// from api
-// useEffect(() => {
-//   getProducts()
-//     .then((response) => {
-//       setProductList(response.data);
-//       setLoading(false);
-//     })
-//     .catch(console.log("sucessful error"));
-// }, []);
-// if (loading)
-//   return (
-//     <div className="flex font-bold justify-center items-center h-screen w-screen">
-//     <i className="fa-solid fa-spinner fa-spin-pulse text-blue-500 text-6xl"></i>
-//   </div>
-
-//   );

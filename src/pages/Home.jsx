@@ -31,8 +31,7 @@ const Home = () => {
               className="   items-center hover:gap-2 w-fit hover:text-yellow-400"
             >
               <button className=" bg-teal-700 text-white rounded-xl hover:bg-green-900  p-2  rounded-tr-none">
-                Explore Store 
-             
+                Explore Store
               </button>
             </Link>
           </div>
