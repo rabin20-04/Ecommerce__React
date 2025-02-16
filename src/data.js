@@ -30,4 +30,29 @@ export default [
     price: 950,
     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8IMEmrM3-OdAFY5fXGaGe5twSQ9lizvSEzg&s",
   },
+  {
+    id: 72380945793485,
+    name: "Urban Windbreaker",
+    price: 900,
+  },
+  {
+    id: 82380945793485,
+    name: "Minimalist Fleece Jacket",
+    price: 850,
+  },
+  {
+    id: 92380945793485,
+    name: "Lightweight Puffer Jacket",
+    price: 800,
+  },
+  {
+    id: 102380945793485,
+    name: "Casual Cotton Jacket",
+    price: 750,
+  },
+  {
+    id: 112380945793485,
+    name: "Sporty Track Jacket",
+    price: 700,
+  },
 ];

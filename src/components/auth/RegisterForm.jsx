@@ -17,7 +17,7 @@ const RegisterForm = () => {
   // this submitform is use to post the data from here to backend
   function submitForm(data) {
     console.log(data);
-    navigate("/login");
+    navigate("/auth/login");
   }
 
   // we sent the user to home after correct email and password putting by naviagte from useNavigate of react-router-dom

@@ -5,7 +5,7 @@ import { GiSpikedDragonHead } from "react-icons/gi";
 const Navbar = () => {
   const navLinkClass = ({ isActive }) =>
     isActive
-      ? "block py-2 px-3 text-blue  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+      ? "block py-2 px-3 text-blue  md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 "
       : "text-green";
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
   return (
@@ -62,7 +62,7 @@ const Navbar = () => {
               <ul className="py-2 " aria-labelledby="user-menu-button">
                 <li>
                   <a
-                    href="/"
+                    href="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                   >
                     Dashboard
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 <li>
                   <a
-                    href="#"
+                    href="/auth/login"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                   >
                     Sign out
@@ -127,11 +127,7 @@ const Navbar = () => {
                   About
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/contact" className={navLinkClass}>
-                  Contact
-                </NavLink>
-              </li>
+             
               <li>
                 <NavLink to="/products" className={navLinkClass}>
                   Product
