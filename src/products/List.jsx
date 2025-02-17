@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../components/Title";
-import ProductsCard from "../components/products/card";
+import ProductsCard from "../components/products/Card";
 import ProductData from "../data";
 
 const List = () => {
