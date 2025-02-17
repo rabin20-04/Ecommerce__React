@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Email_Regex } from "../constants/Regex";
+import { Email_Regex } from "../constants/regex/";
 import { login } from "../../api/auth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 const RegisterForm = () => {
