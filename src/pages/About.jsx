@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGithub, FaHome, FaLinkedin } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -23,9 +25,9 @@ const About = () => {
           <a
             href="/"
             rel="noopener noreferrer"
-            className="text-6xl hover:text-blue-500"
+            className="text-6xl hover:text-gray-400 text-black"
           >
-            <FaHome />
+            <AiFillHome />
           </a>
         </div>
 
