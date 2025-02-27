@@ -20,14 +20,7 @@ const About = () => {
             <FaGithub />
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/rabin-poudel-770842277"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-6xl hover:text-blue-500"
-          >
-            <FaLinkedin />
-          </a>
+          
         </div>
 
         <div>
