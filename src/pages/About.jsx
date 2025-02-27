@@ -20,7 +20,13 @@ const About = () => {
             <FaGithub />
           </a>
 
-          
+          <a
+            href="/"
+            rel="noopener noreferrer"
+            className="text-6xl hover:text-blue-500"
+          >
+            <FaHome />
+          </a>
         </div>
 
         <div>
