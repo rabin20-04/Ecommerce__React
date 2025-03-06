@@ -52,7 +52,7 @@ const LoginForm = () => {
             required: "Password is required",
             minLength: {
               value: 8,
-              message: "Password lenght must be greater than 8 ",
+              message: "Password length must be greater than 8 ",
             },
           })}
         />
